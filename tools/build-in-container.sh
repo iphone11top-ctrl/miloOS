@@ -75,7 +75,7 @@ serial --unit=0 --speed=115200
 terminal_input console serial
 terminal_output console serial
 menuentry "miloOS" {
-  linux /boot/vmlinuz console=ttyS0,115200n8 loglevel=4
+  linux /boot/vmlinuz console=tty0 loglevel=4
   initrd /boot/initramfs.gz
 }
 GRUB
@@ -85,7 +85,7 @@ grub-mkrescue -o build/miloOS.iso build/iso >/dev/null 2>&1
 # A separate image carries a one-shot kernel argument and is used only by the
 # automated boot smoke test. The normal image always leaves the shell running.
 cp -a build/iso build/iso-smoke
-sed -i 's/loglevel=4/loglevel=4 miloos.smoke=1/' build/iso-smoke/boot/grub/grub.cfg
+sed -i 's/console=tty0 loglevel=4/console=tty0 console=ttyS0,115200n8 loglevel=4 miloos.smoke=1/' build/iso-smoke/boot/grub/grub.cfg
 grub-mkrescue -o build/miloOS-smoke.iso build/iso-smoke >/dev/null 2>&1
 
 {

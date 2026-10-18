@@ -1,7 +1,7 @@
 miloOS 0.1.0
 kernel=/boot/vmlinuz-6.12.113+deb13-amd64
 kernel_version=6.12.113+deb13-amd64
-39d242fdeae5ed69cb5bf8973118b26ec338fbdb79fec02c97a5fb540a041f69  build/miloOS.iso
-a62f845bcb20814414922bd7366f4924bb9a537e7fb55330e623a2a4a75b82cb  build/miloOS-smoke.iso
+ef8e5e393363d47e1b9161ff5e1b171923b1e5cafaf4f87aa886940cd2698bcb  build/miloOS.iso
+a3553adc847ba80589e99f5f2251150a2dbaf205d7db9700ecebafa39e710c4f  build/miloOS-smoke.iso
 4336c75fc1a6a58e7bda66cbe9f4042f88064e7abc93faaea9e2aceb19459561  build/vmlinuz
 264ce06377b388e9ebb2e30d420a3f324d2db8b9c0fb9813a2b1a1efc8e50adf  build/initramfs.gz

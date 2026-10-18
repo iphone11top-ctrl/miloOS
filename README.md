@@ -30,12 +30,11 @@ make smoke       # загрузка отдельного smoke-ISO в QEMU вн�
 docker run --rm -it \
   -v "$PWD/build:/images:ro" debian:13-slim \
   sh -c 'apt-get update -qq && apt-get install -y -qq qemu-system-x86 && \
-         qemu-system-x86_64 -cdrom /images/miloOS.iso -m 256 -nographic \
-         -serial mon:stdio'
+         qemu-system-x86_64 -cdrom /images/miloOS.iso -m 256'
 ```
 
-Система загружает shell на serial console. Для выхода из QEMU используйте
-`Ctrl-a`, затем `x`.
+В VirtualBox консоль отображается прямо в окне VM. Для QEMU нужен графический
+дисплей; для headless-проверки используйте `make smoke`.
 
 ## Ограничения текущего MVP
 

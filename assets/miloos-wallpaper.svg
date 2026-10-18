@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">miloOS desktop wallpaper</title>
+  <desc id="desc">Dark graphite wallpaper with the miloOS starburst emblem and colored corner circles.</desc>
+  <rect width="1920" height="1080" fill="#242424"/>
+  <circle cx="0" cy="0" r="190" fill="#1018ff"/>
+  <circle cx="960" cy="-65" r="165" fill="#d9d9d9"/>
+  <circle cx="1920" cy="0" r="190" fill="#ff0808"/>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0 8 4 0 8Z" fill="#f4f4f4"/>
+    </marker>
+    <g id="rays" fill="#1018ff">
+      <path d="M0 0 -12 -250 12 -250Z"/>
+      <path d="M0 0 -12 -250 12 -250Z" transform="rotate(45)"/>
+      <path d="M0 0 -12 -250 12 -250Z" transform="rotate(90)"/>
+      <path d="M0 0 -12 -250 12 -250Z" transform="rotate(135)"/>
+      <path d="M0 0 -12 -250 12 -250Z" transform="rotate(180)"/>
+      <path d="M0 0 -12 -250 12 -250Z" transform="rotate(225)"/>
+      <path d="M0 0 -12 -250 12 -250Z" transform="rotate(270)"/>
+      <path d="M0 0 -12 -250 12 -250Z" transform="rotate(315)"/>
+    </g>
+    <g id="core">
+      <g fill="#ff0808">
+        <circle cy="-76" r="54"/>
+        <circle cx="54" cy="-54" r="54"/>
+        <circle cx="76" r="54"/>
+        <circle cx="54" cy="54" r="54"/>
+        <circle cy="76" r="54"/>
+        <circle cx="-54" cy="54" r="54"/>
+        <circle cx="-76" r="54"/>
+        <circle cx="-54" cy="-54" r="54"/>
+      </g>
+      <polygon fill="#d9d9d9" points="0,-55 43,-43 55,0 43,43 0,55 -43,43 -55,0 -43,-43"/>
+    </g>
+    <g id="arrows" stroke="#f4f4f4" stroke-width="2" fill="none" marker-end="url(#arrow)">
+      <line x1="0" y1="-390" x2="0" y2="-150"/>
+      <line x1="110" y1="-374" x2="70" y2="-150"/>
+      <line x1="210" y1="-330" x2="125" y2="-135"/>
+      <line x1="300" y1="-260" x2="165" y2="-100"/>
+      <line x1="365" y1="-165" x2="190" y2="-60"/>
+      <line x1="390" y1="0" x2="150" y2="0"/>
+      <line x1="365" y1="165" x2="190" y2="60"/>
+      <line x1="300" y1="260" x2="165" y2="100"/>
+      <line x1="210" y1="330" x2="125" y2="135"/>
+      <line x1="110" y1="374" x2="70" y2="150"/>
+      <line x1="0" y1="390" x2="0" y2="150"/>
+      <line x1="-110" y1="374" x2="-70" y2="150"/>
+      <line x1="-210" y1="330" x2="-125" y2="135"/>
+      <line x1="-300" y1="260" x2="-165" y2="100"/>
+      <line x1="-365" y1="165" x2="-190" y2="60"/>
+      <line x1="-390" y1="0" x2="-150" y2="0"/>
+      <line x1="-365" y1="-165" x2="-190" y2="-60"/>
+      <line x1="-300" y1="-260" x2="-165" y2="-100"/>
+      <line x1="-210" y1="-330" x2="-125" y2="-135"/>
+      <line x1="-110" y1="-374" x2="-70" y2="-150"/>
+    </g>
+  </defs>
+
+  <g transform="translate(960 550) scale(1.18)">
+    <use href="#rays"/>
+    <use href="#arrows"/>
+    <use href="#core"/>
+  </g>
+</svg>

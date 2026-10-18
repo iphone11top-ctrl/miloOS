@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">miloOS logo</title>
+  <desc id="desc">Blue eight-point star, red scalloped form, gray center, and inward white arrows.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0 8 4 0 8Z" fill="#f4f4f4"/>
+    </marker>
+  </defs>
+  <g stroke="#f4f4f4" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <line x1="256" y1="20" x2="256" y2="142"/>
+    <line x1="323" y1="30" x2="291" y2="148"/>
+    <line x1="388" y1="65" x2="317" y2="166"/>
+    <line x1="442" y1="119" x2="342" y2="190"/>
+    <line x1="477" y1="184" x2="358" y2="216"/>
+    <line x1="492" y1="256" x2="370" y2="256"/>
+    <line x1="477" y1="328" x2="358" y2="296"/>
+    <line x1="442" y1="393" x2="342" y2="322"/>
+    <line x1="388" y1="447" x2="317" y2="346"/>
+    <line x1="323" y1="482" x2="291" y2="364"/>
+    <line x1="256" y1="492" x2="256" y2="370"/>
+    <line x1="189" y1="482" x2="221" y2="364"/>
+    <line x1="124" y1="447" x2="195" y2="346"/>
+    <line x1="70" y1="393" x2="170" y2="322"/>
+    <line x1="35" y1="328" x2="154" y2="296"/>
+    <line x1="20" y1="256" x2="142" y2="256"/>
+    <line x1="35" y1="184" x2="154" y2="216"/>
+    <line x1="70" y1="119" x2="170" y2="190"/>
+    <line x1="124" y1="65" x2="195" y2="166"/>
+    <line x1="189" y1="30" x2="221" y2="148"/>
+  </g>
+  <g fill="#1018ff">
+    <path d="M256 256 244 16h24z"/>
+    <path d="M256 256 244 16h24z" transform="rotate(45 256 256)"/>
+    <path d="M256 256 244 16h24z" transform="rotate(90 256 256)"/>
+    <path d="M256 256 244 16h24z" transform="rotate(135 256 256)"/>
+    <path d="M256 256 244 16h24z" transform="rotate(180 256 256)"/>
+    <path d="M256 256 244 16h24z" transform="rotate(225 256 256)"/>
+    <path d="M256 256 244 16h24z" transform="rotate(270 256 256)"/>
+    <path d="M256 256 244 16h24z" transform="rotate(315 256 256)"/>
+  </g>
+  <g fill="#ff0808">
+    <circle cx="256" cy="184" r="50"/>
+    <circle cx="307" cy="205" r="50"/>
+    <circle cx="328" cy="256" r="50"/>
+    <circle cx="307" cy="307" r="50"/>
+    <circle cx="256" cy="328" r="50"/>
+    <circle cx="205" cy="307" r="50"/>
+    <circle cx="184" cy="256" r="50"/>
+    <circle cx="205" cy="205" r="50"/>
+  </g>
+  <polygon fill="#d9d9d9" points="256,202 296,216 310,256 296,296 256,310 216,296 202,256 216,216"/>
+</svg>

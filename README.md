@@ -16,7 +16,7 @@ GitHub-токена.
 ## Сборка и проверка
 
 ```sh
-make image       # build/miloOS.iso, build/vmlinuz, build/initramfs.gz
+make image       # build/miloOS-BETA.iso, build/vmlinuz, build/initramfs.gz
 make check       # проверка ISO, ядра, gzip и содержимого initramfs
 make smoke       # загрузка отдельного smoke-ISO в QEMU внутри Docker
 ```
@@ -30,7 +30,7 @@ make smoke       # загрузка отдельного smoke-ISO в QEMU вн�
 docker run --rm -it \
   -v "$PWD/build:/images:ro" debian:13-slim \
   sh -c 'apt-get update -qq && apt-get install -y -qq qemu-system-x86 && \
-         qemu-system-x86_64 -cdrom /images/miloOS.iso -m 256'
+         qemu-system-x86_64 -cdrom /images/miloOS-BETA.iso -m 256'
 ```
 
 В VirtualBox консоль отображается прямо в окне VM. Для QEMU нужен графический

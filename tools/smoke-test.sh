@@ -3,14 +3,14 @@ set -eu
 
 ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 cd "$ROOT"
-test -s build/miloOS-smoke.iso
+test -s build/miloOS-BETA-smoke.iso
 
 set +e
 output=$(docker run --rm --platform linux/amd64 -v "$ROOT/build:/images:ro" \
   debian:13-slim bash -eu -c '
     apt-get update -qq
     apt-get install -y --no-install-recommends -qq qemu-system-x86 >/dev/null
-    timeout 45 qemu-system-x86_64 -cdrom /images/miloOS-smoke.iso -m 256 \
+    timeout 45 qemu-system-x86_64 -cdrom /images/miloOS-BETA-smoke.iso -m 256 \
       -nographic -serial mon:stdio -no-reboot 2>&1
   ')
 status=$?

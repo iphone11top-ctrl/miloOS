@@ -10,6 +10,7 @@ apt-get install -y --no-install-recommends \
   busybox-static cpio gzip grub-pc-bin mtools xorriso linux-image-amd64 >/dev/null
 
 rm -rf build/.rootfs build/iso build/iso-smoke
+rm -f build/miloOS.iso build/miloOS-smoke.iso build/miloOS-BETA.iso build/miloOS-BETA-smoke.iso
 mkdir -p build/.rootfs/{bin,dev,etc,proc,sys,tmp,root,run} \
   build/.rootfs/usr/share/backgrounds build/iso/boot/grub
 chmod 1777 build/.rootfs/tmp
@@ -80,23 +81,23 @@ menuentry "miloOS" {
 }
 GRUB
 
-grub-mkrescue -o build/miloOS.iso build/iso >/dev/null 2>&1
+grub-mkrescue -o build/miloOS-BETA.iso build/iso >/dev/null 2>&1
 
 # A separate image carries a one-shot kernel argument and is used only by the
 # automated boot smoke test. The normal image always leaves the shell running.
 cp -a build/iso build/iso-smoke
 sed -i 's/console=tty0 loglevel=4/console=tty0 console=ttyS0,115200n8 loglevel=4 miloos.smoke=1/' build/iso-smoke/boot/grub/grub.cfg
-grub-mkrescue -o build/miloOS-smoke.iso build/iso-smoke >/dev/null 2>&1
+grub-mkrescue -o build/miloOS-BETA-smoke.iso build/iso-smoke >/dev/null 2>&1
 
 {
-  echo 'miloOS 0.1.0'
+  echo 'miloOS-BETA 0.1.0'
   echo "kernel=$KERNEL"
   echo "kernel_version=$(basename "$KERNEL" | sed 's/^vmlinuz-//')"
-  sha256sum build/miloOS.iso build/miloOS-smoke.iso build/vmlinuz build/initramfs.gz
+  sha256sum build/miloOS-BETA.iso build/miloOS-BETA-smoke.iso build/vmlinuz build/initramfs.gz
 } > build/manifest.txt
 
 rm -rf build/.rootfs build/iso build/iso-smoke
 if [ -n "${HOST_UID:-}" ] && [ -n "${HOST_GID:-}" ]; then
   chown -R "$HOST_UID:$HOST_GID" build
 fi
-echo 'Built build/miloOS.iso'
+echo 'Built build/miloOS-BETA.iso'
